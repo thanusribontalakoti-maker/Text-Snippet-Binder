@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Create Snippet</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<style>
+body{
+    min-height:100vh;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+body{
+    align-items:flex-start !important;
+    padding-top:40px;
+    overflow-y:auto;
+}
+.editor-card{
+
+width:900px;
+max-width:95%;
+
+padding:40px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(20px);
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.2);
+
+box-shadow:
+0 25px 45px rgba(0,0,0,.2);
+
+color:white;
+}
+
+.form-group{
+margin-bottom:20px;
+}
+
+label{
+display:block;
+margin-bottom:8px;
+font-weight:600;
+}
+
+input,
+select,
+textarea{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+outline:none;
+
+border-radius:12px;
+
+font-size:15px;
+}
+
+textarea{
+height:250px;
+resize:none;
+}
+
+.actions{
+
+display:flex;
+
+gap:15px;
+
+flex-wrap:wrap;
+}
+
+.save-btn{
+background:#00e676;
+}
+
+.home-btn{
+background:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+
+<div class="container">
+
+<div class="editor-card">
+
+<h1>Create Snippet</h1>
+
+<br>
+
+<div class="form-group">
+
+<label>
+Snippet Title
+</label>
+
+<input
+type="text"
+id="title"
+placeholder="Example: JavaScript Loop">
+
+</div>
+
+<div class="form-group">
+
+<label>
+Category
+</label>
+
+<select id="category">
+
+<option>HTML</option>
+
+<option>CSS</option>
+
+<option>JavaScript</option>
+
+<option>React</option>
+
+<option>NodeJS</option>
+
+<option>Python</option>
+
+<option>SQL</option>
+
+<option>Notes</option>
+
+<option>Ideas</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+Snippet Content
+</label>
+
+<textarea
+id="content"
+placeholder="Paste your code or notes here..."></textarea>
+
+</div>
+
+<div class="actions">
+
+<button
+class="save-btn"
+id="saveBtn">
+
+💾 Save Snippet
+
+</button>
+
+<a href="index.html">
+
+<button
+class="home-btn">
+
+🏠 Dashboard
+
+</button>
+
+</a>
+
+</div>
+
+<p
+id="message"
+style="margin-top:20px;">
+</p>
+
+</div>
+
+</div>
+
+<script src="editor.js"></script>
+
+</body>
+</html>

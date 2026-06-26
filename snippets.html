@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Snippet Library</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<style>
+
+.library-card{
+
+width:1200px;
+max-width:95%;
+
+padding:35px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(20px);
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.2);
+
+box-shadow:
+0 25px 45px rgba(0,0,0,.2);
+
+color:white;
+}
+
+.top-section{
+
+display:flex;
+gap:15px;
+
+flex-wrap:wrap;
+
+margin:20px 0;
+}
+
+.search-box{
+
+flex:1;
+min-width:250px;
+}
+
+.search-box input{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+outline:none;
+
+border-radius:12px;
+}
+
+.filter-box select{
+
+padding:15px;
+
+border:none;
+
+outline:none;
+
+border-radius:12px;
+}
+
+.snippet-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fill,minmax(320px,1fr));
+
+gap:20px;
+
+margin-top:25px;
+}
+
+.snippet-card{
+
+background:white;
+
+color:black;
+
+padding:20px;
+
+border-radius:20px;
+
+display:flex;
+flex-direction:column;
+
+justify-content:space-between;
+}
+
+.snippet-card h3{
+margin-bottom:10px;
+}
+
+.badge{
+
+display:inline-block;
+
+background:#667eea;
+
+color:white;
+
+padding:5px 10px;
+
+border-radius:50px;
+
+font-size:12px;
+
+margin-bottom:10px;
+}
+
+.code-box{
+
+background:#f4f4f4;
+
+padding:15px;
+
+border-radius:10px;
+
+height:150px;
+
+overflow:auto;
+
+white-space:pre-wrap;
+
+font-size:14px;
+}
+
+.card-actions{
+
+display:flex;
+
+gap:10px;
+
+margin-top:15px;
+}
+
+.copy-btn{
+background:#00e676;
+}
+
+.delete-btn{
+background:#ff5252;
+color:white;
+}
+
+.empty{
+
+text-align:center;
+
+padding:50px;
+
+font-size:22px;
+}
+
+.home-link{
+
+display:inline-block;
+
+margin-bottom:15px;
+
+color:white;
+
+text-decoration:none;
+}
+
+.stats{
+margin-top:15px;
+}
+body{
+    align-items:flex-start !important;
+    padding-top:40px;
+    overflow-y:auto;
+}
+body{
+    min-height:100vh;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+
+<div class="container">
+
+<div class="library-card">
+
+<h1>📂 Snippet Library</h1>
+
+<a
+href="index.html"
+class="home-link">
+
+← Dashboard
+
+</a>
+
+<div class="stats">
+
+Total Snippets:
+<span id="totalCount">
+0
+</span>
+
+</div>
+
+<div class="top-section">
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search snippets...">
+
+</div>
+
+<div class="filter-box">
+
+<select id="categoryFilter">
+
+<option value="all">
+All Categories
+</option>
+
+<option value="HTML">HTML</option>
+<option value="CSS">CSS</option>
+<option value="JavaScript">JavaScript</option>
+<option value="React">React</option>
+<option value="NodeJS">NodeJS</option>
+<option value="Python">Python</option>
+<option value="SQL">SQL</option>
+<option value="Notes">Notes</option>
+<option value="Ideas">Ideas</option>
+<option value="Other">Other</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div
+id="snippetContainer"
+class="snippet-grid">
+
+</div>
+
+</div>
+
+</div>
+
+<script src="snippets.js"></script>
+
+</body>
+</html>
